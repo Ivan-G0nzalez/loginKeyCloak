@@ -45,6 +45,8 @@ const getUsername = () => _kc.tokenParsed?.preferred_username;
 
 const hasRole = (roles) => roles.some((role) => _kc.hasRealmRole(role));
 
+const getEmail = () => _kc.idTokenParsed?.email
+
 const UserService = {
   keycloakInit,
   doLogin,
@@ -54,6 +56,7 @@ const UserService = {
   updateToken,
   getUsername,
   hasRole,
+  getEmail
 };
 
 export default UserService;

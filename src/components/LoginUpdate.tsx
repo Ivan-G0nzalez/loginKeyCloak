@@ -17,7 +17,7 @@ function LoginKeycloak() {
 
   return (
     <div>
-      <h1>abc</h1>
+      <h1>user: {UserService.getEmail() !== null ? <p>{UserService.getEmail()}</p> : ""}</h1>
       {UserService.isLoggedIn() ? (
         <div>
           <button type="button" onClick={handleLogout}>

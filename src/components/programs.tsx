@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 
-function Generic() {
+function Programs() {
   return (
     <div>
-      <h2>Prueba</h2>
+      <h2>programas</h2>
       <Outlet />
     </div>
   );
 }
 
-export default Generic;
+export default Programs;

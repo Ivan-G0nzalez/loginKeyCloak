@@ -1,11 +1,11 @@
-import HelloWorld from './components/HelloWorld';
-import LoginKeycloak from './components/LoginUpdate';
-import Login from './components/Login';
+import HelloWorld from "./components/HelloWorld";
+import LoginKeycloak from "./components/LoginUpdate";
+import Login from "./components/Login";
 
-import { useRoutes } from 'react-router-dom';
-import routes from './routes/RouterApp';
+import { useRoutes } from "react-router-dom";
+import routes from "./routes/RouterApp";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   const elemet = useRoutes(routes);

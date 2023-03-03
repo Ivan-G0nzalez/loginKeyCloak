@@ -1,21 +1,27 @@
-import { Children } from 'react';
-import Generic from '../generic/Generic';
-import LoginKeycloak from '../components/LoginUpdate';
+import { Children } from "react";
+import Generic from "../generic/Generic";
+import LoginKeycloak from "../components/LoginUpdate";
+import PrivateRoute from "../helpers/PrivateRoute";
+import Programs from "../components/programs";
 
 const routes = [
   {
-    path: '/',
+    path: "/",
     element: <Generic />,
     children: [
       {
-        path: '/auth',
+        path: "/auth",
         element: <LoginKeycloak />,
       },
+      {
+        path: "/programs",
+        element: (
+          <PrivateRoute>
+            <Programs />
+          </PrivateRoute>
+        ),
+      },
     ],
-  },
-  {
-    path: '*',
-    element: <h1 style={{ color: 'red' }}>Error</h1>,
   },
 ];
 
